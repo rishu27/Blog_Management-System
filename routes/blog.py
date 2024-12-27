@@ -35,8 +35,6 @@ def update_post(title: str, updated_post: Post):
             posts[index] = updated_post
             return updated_post
     raise HTTPException(status_code=404, detail="Post not found")
-
-@router.delete("/posts/{title}", summary="Delete a blog post")
 def delete_post(title: str):
     """
     Delete a blog post by its title.
